@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/history_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_shadow_end_color"
+    android:orientation="vertical"
+    tools:context=".HistoryFragment">
+
+
+    <ListView
+        android:id="@+id/lv_hist_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

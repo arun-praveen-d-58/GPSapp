@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".hist_det">
+
+
+    <FrameLayout
+        android:id="@+id/frame_map_hist"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="NotSibling">
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/oswald_light"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="Avg.Speed"
+        android:textColor="@color/colorGreen"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_map_hist"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="90dp"
+        android:layout_height="2dp"
+        android:background="@color/colorBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/avg_speed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_map_hist"
+        app:layout_constraintVertical_bias="0.407"
+        tools:ignore="MissingConstraints"></View>
+
+    <TextView
+        android:id="@+id/avg_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/oswald_regular"
+        android:gravity="center"
+        android:text="--"
+        android:textSize="55sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_map_hist"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UnknownId"></TextView>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="190dp"
+        android:layout_gravity="center"
+        android:columnCount="2"
+
+        android:orientation="horizontal"
+        android:rowCount="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_light"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="Total Km"
+                android:textColor="@color/colorGreen"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="70dp"
+                android:layout_height="2dp"
+                android:background="@color/colorBlue"></View>
+
+            <TextView
+                android:id="@+id/total_dist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_regular"
+                android:gravity="center"
+                android:text="--"
+                android:textSize="55sp"
+                tools:ignore="DuplicateIds" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_light"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="hr : min : sec"
+                android:textColor="@color/colorGreen"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="110dp"
+                android:layout_height="1dp"
+                android:background="@color/colorBlue"></View>
+
+            <TextView
+                android:id="@+id/total_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_regular"
+                android:gravity="center"
+                android:text="--"
+                android:textSize="55sp"
+                tools:ignore="DuplicateIds"/>
+
+        </LinearLayout>
+
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

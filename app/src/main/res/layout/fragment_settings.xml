@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_shadow_end_color"
+    android:layout_gravity="start"
+    tools:context=".SettingsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="248dp"
+                android:columnCount="2"
+                android:orientation="horizontal"
+
+                android:rowCount="2"
+
+
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_light"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:text="Unit"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="26sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/rg_dist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_km"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/oswald_light"
+
+                            android:paddingHorizontal="5dp"
+                            android:text="km"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_mil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/oswald_light"
+                            android:paddingHorizontal="5dp"
+                            android:text="mil"
+                            android:textSize="18sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_light"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:text="Speed/Pace"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="26sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="80dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/rg_speed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rb_speed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/oswald_light"
+
+                                android:paddingHorizontal="5dp"
+                                android:text="speed"
+                                android:textSize="18sp" />
+
+                            <RadioButton
+                                android:id="@+id/rb_pace"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/oswald_light"
+                                android:paddingHorizontal="5dp"
+                                android:text="pace"
+                                android:textSize="18sp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_light"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:text="Audio"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="30sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="80dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/rg_audio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rb_on"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/oswald_light"
+
+                                android:paddingHorizontal="5dp"
+                                android:text="on"
+                                android:textSize="20sp" />
+
+                            <RadioButton
+                                android:id="@+id/rb_off"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/oswald_light"
+                                android:paddingHorizontal="5dp"
+                                android:text="off"
+                                android:textSize="20sp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </GridLayout>
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+</FrameLayout>
+

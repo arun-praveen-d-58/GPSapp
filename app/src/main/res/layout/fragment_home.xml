@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_centerHorizontal="true"
+   android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="205dp"
+                android:layout_height="205dp"
+                android:background="@drawable/start_but_style"
+                android:fontFamily="@font/oswald_medium"
+                android:shadowRadius="@android:integer/config_longAnimTime"
+                android:text="@string/start"
+
+                android:textSize="45sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Timer">
+    <FrameLayout
+        android:id="@+id/frame_map_hist"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="NotSibling">
+    </FrameLayout>
+
+    <LinearLayout
+
+        android:id="@+id/lin_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/frame_map_hist"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Chronometer
+
+                android:id="@+id/chronometer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+
+android:fontFamily="@font/oswald_regular"
+                android:textSize="45sp"></Chronometer>
+
+            <View
+                android:layout_width="110dp"
+                android:layout_height="2dp"
+                android:background="@color/colorBlue"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_light"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="hr : min : sec"
+                android:textColor="@color/colorGreen"
+                android:textSize="24sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oswald_regular"
+                    android:gravity="bottom"
+                    android:text="0.0"
+                    android:textSize="45sp" />
+
+                <View
+                    android:layout_width="110dp"
+                    android:layout_height="2dp"
+                    android:background="@color/colorBlue"></View>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oswald_light"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="Current Speed kph"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="24sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oswald_regular"
+                    android:gravity="bottom"
+                    android:text="0.0"
+                    android:textSize="45sp"
+                    tools:ignore="DuplicateIds" />
+
+                <View
+                    android:layout_width="110dp"
+                    android:layout_height="2dp"
+                    android:background="@color/colorBlue"></View>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oswald_light"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="Km"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="24sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       android:background="@color/colorBlue"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <ImageButton
+                android:id="@+id/rec_btn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_baseline_stop_24"
+
+                >
+
+
+            </ImageButton>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"></View>
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+      >
+
+            <ImageButton
+                android:id="@+id/pause_btn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_baseline_pause_24"
+                android:visibility="gone"
+
+                >
+
+
+            </ImageButton>
+
+
+            <ImageButton
+                android:id="@+id/play_btn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_baseline_play_arrow_24"
+
+                >
+
+
+            </ImageButton>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
